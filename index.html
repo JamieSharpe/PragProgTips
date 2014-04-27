@@ -22,6 +22,10 @@
         <span id="settings-toggle"><a href="#" onclick="toggleVisibility('settings')" title="Toggle Settings"><i class="fa fa-cog fa-2x"></i></a></span>
     </div>
 
+    <div class="card" style="margin-top:10px;">
+    <p id="joke"></p>
+    </div>
+
     <div id="settings" class="card">
         <h2>Theme</h2>
         <ul class="themes">
@@ -342,6 +346,33 @@
         document.getElementById("tip").innerHTML = "<div id=\"title\"></div><div id=\"desc\"></div>";
         document.getElementById("title").innerHTML = item.title;
         document.getElementById("desc").innerHTML = item.desc;
+
+        var jokes = ["// DRUNK - FIX LATER",
+                    "// I'm sorry..",
+                    "// I am not responsible for this code.<br/>//They made me write it against my will.",
+                    "// Not sure if need this.<br/>// but too scared to delete it.",
+                    "///////////////////// This is a well commented line.",
+                    "// This code sucks.<br/>// You know it, I know it.<br/>// Move on and call me an idiot later.",
+                    "// Here be dragons.",
+                    "// This should fix something that should never happen.",
+                    "// You are not meant to understand this.",
+                    "// Please work..",
+                    "// No comments for you.<br/>// It was hard to write so it should be hard to read",
+                    "// Please future me.. please forgive me.<br/>// I can't even begin to express how sorry I am.",
+                    "// If this comment is removed<br/>// the program will blow up.",
+                    "const int TEN = 10; // As if the value of ten will fluctuate.<br/>const int TEN = 11; // Mine goes to eleven.",
+                    "using namespace std; // so sue me.",
+                    "class Act{} // That's me!",
+                    "long long ago; // In a galaxy far far away.",
+                    "Catch (Exception e) {<br/>// Who cares?<br/>}",
+                    "// TODO: Fix this. Fix what?",
+                    "// When I wrote this only God and I<br>// understood what was going on.<br/>// Now only God knows.",
+                    "// Dear Maintainer,<br/>// Once you are done trying to \"optimise\"<br/>// this routine, and have realised what a<br/>// terrible mistake that was, please increment the<br/>// following counter as a warning to the next guy.<br/>Total_hours_wasted_here = 42;",
+                    "// Magic, do not touch.",
+                    "If it doesn't have to work, I can optimise any code to a runtime of 0.",
+                    "// somedev1 - 06/07/02 Adding a temporary fix.<br/>// somedev2 - 22/05/07 temporary my ass."
+                    ];
+        document.getElementById("joke").innerHTML = jokes[Math.floor(Math.random()*jokes.length)];
     </script>
 </body>
 </html>
