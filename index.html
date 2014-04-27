@@ -62,6 +62,10 @@
             document.getElementById("tipNumber").value = itemNumber;            
         }
         
+        function showJoke() {
+            document.getElementById("joke").innerHTML = jokes[Math.floor(Math.random()*jokes.length)];
+        }
+        
         function toggleVisibility(id) {
            var e = document.getElementById(id);
            if(e.style.display == 'block')
@@ -100,7 +104,7 @@
             if(timeout > 0)
             {
                 clearTimeout(timeoutId);
-                timeoutId = setInterval("showTip()", timeout * 1000 * 60);
+                timeoutId = setInterval("showTip(); showJoke();", timeout * 1000 * 60);
                 localStorage.setItem("timeoutMins", timeout);
             }
             else
@@ -450,9 +454,9 @@
                     "If it doesn't have to work, I can optimise any code to a runtime of 0.",
                     "// somedev1 - 06/07/02 Adding a temporary fix.<br/>// somedev2 - 22/05/07 temporary my ass."
                     ];
-        document.getElementById("joke").innerHTML = jokes[Math.floor(Math.random()*jokes.length)];
 
         showTip();
+        showJoke();
     </script>
 </body>
 </html>
